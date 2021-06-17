@@ -4,6 +4,5 @@ int main()
 {
 	Panel panel;
 	panel.run();
-
+	cin.get();
 }
-
