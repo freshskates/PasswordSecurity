@@ -1,6 +1,6 @@
 #include "panel/panel.h"
 
-int main()
+int main(int argc, char* argv[])
 {
 	Panel panel;
 	panel.run();

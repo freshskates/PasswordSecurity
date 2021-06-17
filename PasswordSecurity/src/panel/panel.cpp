@@ -1,41 +1,20 @@
 #include "panel.h"
 #include <string>
+#include <vector>
+
 using namespace std; 
 
-void Panel::status(int flag) {
-
-	if (flag & start) {
-		cout << "-------------------------------\n";
-		cout << "\tWelcome to Spark\n";
-		cout << "-------------------------------\n";
-	}
-
-	if (flag & error) {
-		
-	}
-	
-	if (flag & help) {
-
-	}
-
-	if (flag & prompt) {
-
-	}
-
-	if (flag & quit) {
-		cout << "---------- THANK YOU ----------\n";
-
-	}
-
-}
-
 void Panel::run() {
-	status(start | quit);
+	status(start);
+
+	if (!loop()) {
+		status(quit);
+		return; 
+	}
 
 }
 
-
-int loop() {
+int Panel::loop() {
 	string userInput; 
 	while (true) {
 		getline(cin, userInput);
