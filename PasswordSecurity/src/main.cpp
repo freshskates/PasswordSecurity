@@ -1,4 +1,4 @@
-#include "panel.h"
+#include "panel/panel.h"
 
 int main()
 {
